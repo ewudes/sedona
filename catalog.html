@@ -29,10 +29,69 @@
   <main>
     <section>
       <h2>Фильтр подбора жилья</h2>
-      <!-- Тут будет фильтр -->
+      <article>
+        <h3>Инфраструктура:</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox">Бассейн
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">Парковка
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">Wi-Fi
+            </label>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>Тип жилья:</h3>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox">Гостиница
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">Мотель
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox">Апартаменты
+            </label>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>Стоимость в сутки(р):</h3>
+        <input type="number" placeholder="от 0">
+        <input type="number" placeholder="до 3000">
+        <input type="range" step="1">
+        <button type="button">Показать</button>
+      </article>
     </section>
     <section>
       <h2>Результаты подбора жилья</h2>
+      <div>
+        <span>Найдено: 3</span>
+        <span>Сортировка:</span>
+        <ul>
+          <li>По цене</li>
+          <li>По типу</li>
+          <li>По рейтингу</li>
+        </ul>
+        <ul>
+          <li><button type="button">Вверх</button></li>
+          <li><button type="button">Вниз</button></li>
+        </ul>
+      </div>
       <ul>
         <li>
           <img src="https://via.placeholder.com/150x100" alt="Изображение четырехзвездочной  гостинницы">
