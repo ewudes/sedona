@@ -90,28 +90,28 @@
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поздки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button type="button">Поиск гостиницы в седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <p>
             <label for="checkin">Дата заезда:</label>
-            <input id="checkin" type="date" name="checkin" value= "2017-04-24">
+            <input id="checkin" type="text" name="checkin" placeholder="24 апреля 2017">
             <button type="button">Календарь</button>
           </p>
           <p>
             <label for="checkout">Дата выезда:</label>
-            <input id="checkout" type="date" name="checkout" value="2017-07-04">
+            <input id="checkout" type="text" name="checkout" placeholder="04 июля 2017">
             <button type="button">Календарь</button>
           </p>
           <p>
             <label for="adults">Взрослые:</label>
-            <button type="button">-</button>
-            <input id="adults" type="number" name="adults" value="2">
-            <button type="button">+</button>
+            <button type="button">Убрать одного взрослого</button>
+            <input id="adults" type="text" name="adults" placeholder="2">
+            <button type="button">Добавить одного взрослого</button>
           </p>
           <p>
             <label for="children">Дети:</label>
-            <button type="button">-</button>
-            <input id="children" type="number" name="children" value="0">
-            <button type="button">+</button>
+            <button type="button">Убрать одного ребенка</button>
+            <input id="children" type="text" name="children" placeholder="0">
+            <button type="button">Добавить одного ребенка</button>
           </p>
           <button type="submit">Найти</button>
         </form>
