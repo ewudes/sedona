@@ -29,46 +29,57 @@
   <main>
     <section>
       <h2 class="visually-hidden">Фильтр подбора жилья</h2>
-      <article>
-        <h3>Инфраструктура:</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox">Бассейн
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox">Парковка
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox">Wi-Fi
-            </label>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h3>Тип жилья:</h3>
-        <ul>
-          <li>
-            <label>
-              <input type="checkbox">Гостиница
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox">Мотель
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox">Апартаменты
-            </label>
-          </li>
-        </ul>
-      </article>
+      <form>
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox">Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">Wi-Fi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox">Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (р):</legend>
+          <label for="from">От</label>
+          <input id="from" type="text" placeholder="от 0">
+          <label for="to">До</label>
+          <input id="to" type="text" placeholder="до 3000">
+          <input type="range" min="0" max="3000" step="100" name="range">
+        </fieldset>
+        <button type="button">Показать</button>
+      </form>
     </section>
     <section>
       <h2 class="visually-hidden">Результаты подбора жилья</h2>
