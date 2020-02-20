@@ -8,27 +8,27 @@
   <title>HTML Academy: Седона</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="" alt="Логотип sedona">
-      </a>
-      <ul>
-        <li>
-          <a href="">Информация</a>
-        </li>
-        <li>
-          <a href="">Фото и видео</a>
-        </li>
-        <li>
-          <a href="">Карта штата</a>
-        </li>
-        <li>
-          <a>Гостиницы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img class="logo-pic" src="./img/logo-sedona.svg"  width="140" height="72" alt="Логотип Sedona">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link">Информация</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Фото и видео</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Карта штата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   <main>
     <section>
       <h2 class="visually-hidden">Фильтр подбора жилья</h2>
@@ -103,69 +103,71 @@
           </li>
         </ul>
       </div>
-      <ul>
+      <ul class="result__list">
         <li>
           <img src="img/hotel.jpg" width="135" height="90" alt="Изображение четырехзвездочной  гостинницы">
           <div> 
-            <h3>Amara resort & spa</h3>
+            <h3 class="title title--result">Amara resort & spa</h3>
             <p>Гостиница</p>
             <p>От 4000 р.</p>
-            <a href="">Подробнее</a>
-            <a href="">Забронировать</a>
+            <a href="" class="button button--blue">Подробнее</a>
+            <a href="" class="button button--brown">Забронировать</a>
           </div>
           <div>
             <p>Четыре звезды</p>
-            <p>Рейтинг: 8.5</p>
+            <p class="rating">Рейтинг: 8.5</p>
           </div>
         </li>
         <li>
           <img src="img/motel.jpg" width="135" height="90" alt="Изображение мотеля на три звезды">
           <div>
-            <h3>Desert quail inn</h3>
+            <h3 class="title title--result">Desert quail inn</h3>
             <p>Мотель</p>
             <p>От 3000 р.</p>
-            <a href="">Подробнее</a>
-            <a href="">Забронировать</a>
+            <a href="" class="button button--blue">Подробнее</a>
+            <a href="" class="button button--brown">Забронировать</a>
           </div>
           <div>
             <p>Три звезды</p>
-            <p>Рейтинг: 8.9</p>
+            <p class="rating">Рейтинг: 8.9</p>
           </div>
         </li>
         <li>
           <img src="img/apartments.jpg" width="135" height="90" alt="Изображение скромных двухзвездочных апартаментов">
           <div>
-            <h3>Villas at poco diablo</h3>
+            <h3 class="title title--result">Villas at poco diablo</h3>
             <p>Апартаменты</p>
             <p>От 2000 р.</p>
-            <a href="">Подробнее</a>
-            <a href="">Забронировать</a>
+            <a href="" class="button button--blue">Подробнее</a>
+            <a href="" class="button button--brown">Забронировать</a>
           </div>
           <div>
             <p>Две звезды</p>
-            <p>Рейтинг: 9.2</p>
+            <p class="rating">Рейтинг: 9.2</p>
           </div>
         </li>
       </ul>
     </section>
   </main>
   <footer>
-    <p>#VISITSEDONA
+    <p class="title">#VISITSEDONA
       <a href="tel:+74956660266">+7(495)666-02-66</a>
     </p>
-    <ul>
-      <li>
-        <a href="https://twitter.com/">Twitter</a>
+    <ul class="social">
+      <li class="social-item">
+        <a href="https://twitter.com/" class="social-link">Twitter</a>
       </li>
-      <li>
-        <a href="https://facebook.com/">Facebook</a>
+      <li class="social-item">
+        <a href="https://facebook.com/" class="social-link">Facebook</a>
       </li>
-      <li>
-        <a href="https://www.youtube.com/">YouTube</a>
+      <li class="social-item">
+        <a href="https://www.youtube.com/" class="social-link">YouTube</a>
       </li>
     </ul>
     <p>website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html Academy">
+      </a>
     </p>
   </footer>
 </body>

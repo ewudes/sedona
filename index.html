@@ -8,34 +8,34 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a>
-          <img src="" alt="Логотип sedona">
+    <header class="header">
+      <nav class="nav">
+        <a class="logo">
+          <img class="logo-pic" src="./img/logo-sedona.svg"  width="140" height="72" alt="Логотип Sedona">
         </a>
-        <ul>
-          <li>
-            <a href="">Информация</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link">Информация</a>
           </li>
-          <li>
-            <a href="">Фото и видео</a>
+          <li class="nav__item">
+            <a href="" class="nav__link">Фото и видео</a>
           </li>
-          <li>
-            <a href="">Карта штата</a>
+          <li class="nav__item">
+            <a href="" class="nav__link">Карта штата</a>
           </li>
-          <li>
-            <a href="catalog.html">Гостиницы</a>
+          <li class="nav__item">
+            <a href="catalog.html" class="nav__link">Гостиницы</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <div>
-        <img src="img/intro-welcome.svg" width="460" height="350" alt="Welcome to the gorgeous sedona">
+    <main class="maincontent">
+      <div class="banner">
+        <img class="banner-pic" src="img/intro-welcome.svg" width="460" height="350" alt="Welcome to the gorgeous sedona">
       </div> 
-      <h1>Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
-      <section>
-        <h2>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</h2>
+      <h1 class="title">Седона - небольшой городок в аризоне, заслуживающий большего!</h1>
+      <section class="reasons">
+        <h2>Рассмотрим 5 причины, по которым седона круче, чем гранд каньон!</h2>
         <ul>
           <li>
             <div>
@@ -90,33 +90,33 @@
       </section>
       <section>
         <h2 class="visually-hidden">Предложения гостиниц в Седоне</h2>
-        <p>Заинтересовались?</p>
+        <p class="subtitle">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поздки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button">Поиск гостиницы в седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <p>
+        <button type="button" class="button button--brown">Поиск гостиницы в седоне</button>
+        <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+          <p class="form-item">
             <label for="checkin">Дата заезда:</label>
             <input id="checkin" type="text" name="checkin" placeholder="24 апреля 2017">
             <button type="button">Календарь</button>
           </p>
-          <p>
+          <p class="form-item">
             <label for="checkout">Дата выезда:</label>
             <input id="checkout" type="text" name="checkout" placeholder="04 июля 2017">
             <button type="button">Календарь</button>
           </p>
-          <p>
+          <p class="form-item">
             <label for="adults">Взрослые:</label>
             <button type="button">Убрать одного взрослого</button>
             <input id="adults" type="text" name="adults" placeholder="2">
             <button type="button">Добавить одного взрослого</button>
           </p>
-          <p>
+          <p class="form-item">
             <label for="children">Дети:</label>
             <button type="button">Убрать одного ребенка</button>
             <input id="children" type="text" name="children" placeholder="0">
             <button type="button">Добавить одного ребенка</button>
           </p>
-          <button type="submit">Найти</button>
+          <button type="submit" class="button button--blue">Найти</button>
         </form>
       </section>
       <section>
@@ -127,22 +127,24 @@
       </section>
     </main>
     <footer>
-      <p>#VISITSEDONA
+      <p class="title">#VISITSEDONA
         <a href="tel:+74956660266">+7(495)666-02-66</a>
       </p>
-      <ul>
-        <li>
-          <a href="https://twitter.com/">Twitter</a>
+      <ul class="social">
+        <li class="social-item">
+          <a href="https://twitter.com/" class="social-link">Twitter</a>
         </li>
-        <li>
-          <a href="https://facebook.com/">Facebook</a>
+        <li class="social-item">
+          <a href="https://facebook.com/" class="social-link">Facebook</a>
         </li>
-        <li>
-          <a href="https://www.youtube.com/">YouTube</a>
+        <li class="social-item">
+          <a href="https://www.youtube.com/" class="social-link">YouTube</a>
         </li>
       </ul>
       <p>website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html Academy">
+        </a>
       </p>
     </footer>
   </body>

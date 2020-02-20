@@ -1,3 +1,151 @@
 body {
-  font-family: 'PT Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.title--result:hover,
+.title--result:focus {
+  color: #81b3d2;
+}
+
+.title--result:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+  background-color: #ccc;
+  background-image: url("../img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nav__list {
+  list-style: none;
+  font-weight: 700;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: #81b3d2;
+}
+
+.nav__link:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.nav__link--active{
+  color: #766357;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #3d3d3d;
+  border: none;
+  cursor: pointer;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--brown {
+  background-color: #766357;
+}
+
+.button--brown:hover,
+.button--brown:focus  {
+  background-color: #604e43;
+}
+
+.button--brown:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--blue {
+  background-color: #81b3d2;
+}
+
+.button--blue:hover,
+.button--blue:focus  {
+  background-color: #669ec0;
+}
+
+.button--blue:active {
+  background-color: #5496bd;
+}
+
+.form-item input[type="text"],
+.form-item button {
+  font: inherit;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.form-item input[type="text"]:hover,
+.form-item button:hover {
+  background-color: #ebebeb;
+}
+
+.form-item input[type="text"]:focus,
+.form-item button:focus {
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+}
+
+.social,
+.result__list {
+  list-style: none;
+}
+
+.social-link {
+  color: #fff;
+  background-color: #81b3d2;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #669ec0;
+}
+
+.social-link:active {
+  background-color: #5496bd;
+}
+
+.rating {
+  background-color: #f2f2f2;
+  color: #666;
 }
