@@ -12,8 +12,18 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .nav a,
-.title a {
+.title a,
+.sort-list a,
+.scroll-list a {
   text-decoration: none;
   color: #000000;
 }
@@ -21,6 +31,23 @@ body {
 .reasons h2 {
   font-size: inherit;
   font-weight: 400;
+}
+
+.reasons-item-blue {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.reasons-item-img {
+  background-color: #cccccc
+}
+
+.reasons-item-gray {
+  background-color: #eeeeee;
+}
+
+.reasons-descr {
+  color: #333333;
 }
 
 img {
@@ -46,6 +73,7 @@ img {
   background-image: url("../img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nav-list {
@@ -70,6 +98,15 @@ img {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+}
+
+.filter {
+  color: #ffffff;
+  background-color: #3d3d3d;
+  background-image: url("../img/bg-filter.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button {
@@ -114,6 +151,16 @@ img {
   background-color: #5496bd;
 }
 
+.button-filter {
+  background-color: transparent;
+}
+
+.button-filter:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
 .form-item input[type="text"],
 .form-item button {
   font: inherit;
@@ -134,7 +181,10 @@ img {
 }
 
 .social,
-.result-list {
+.result-list,
+.sort-list,
+.scroll-list,
+.filter-list {
   list-style: none;
 }
 
