@@ -22,7 +22,6 @@ body {
 
 .nav a,
 .title a,
-.sort-list a,
 .scroll-list a {
   text-decoration: none;
   color: #000000;
@@ -187,7 +186,7 @@ img {
 .filter-list {
   list-style: none;
 }
-
+ 
 .social-link {
   color: #ffffff;
   background-color: #81b3d2;
@@ -205,4 +204,19 @@ img {
 .rating {
   background-color: #f2f2f2;
   color: #666666;
+}
+
+.sort-link {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+.sort-link:hover {
+  color: #81b3d2;
+}
+
+.sort-link:active {
+  color: #000000;
+  border: none;
 }
