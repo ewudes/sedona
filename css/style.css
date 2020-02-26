@@ -20,6 +20,12 @@ body {
   margin: -1px;
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.75);
+}
+
 .nav a,
 .title a,
 .scroll-list a {
@@ -30,6 +36,12 @@ body {
 .reasons h2 {
   font-size: inherit;
   font-weight: 400;
+  text-align: center;
+}
+
+.reasons ul {
+  list-style: none;
+  padding: 0;
 }
 
 .reasons-item-blue {
@@ -45,6 +57,20 @@ body {
   background-color: #eeeeee;
 }
 
+.offers >  p {
+  text-align: center;
+}
+
+.offers > button {
+  width: 568px;
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .reasons-descr {
   color: #333333;
 }
@@ -56,6 +82,7 @@ img {
 .title {
   font-size: 21px;
   font-weight: 700;
+  text-align: center;
 }
 
 .title-result:hover,
@@ -68,9 +95,13 @@ img {
 }
 
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 530px;
   background-color: #cccccc;
   background-image: url("../img/bg.jpg");
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -159,6 +190,12 @@ img {
   color: #000000;
 }
 
+.form-search {
+  display: flex;
+  flex-direction: column;
+  width: 568px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
 
 .form-item input[type="text"],
 .form-item button {
@@ -177,6 +214,11 @@ img {
 .form-item button:focus {
   background-color: transparent;
   border: 2px solid #e5e5e5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .social,
