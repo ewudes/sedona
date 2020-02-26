@@ -82,7 +82,14 @@ img {
 .title {
   font-size: 21px;
   font-weight: 700;
+}
+
+.maincontent > .title {
   text-align: center;
+}
+
+.title-result {
+  margin: 0;
 }
 
 .title-result:hover,
@@ -243,6 +250,10 @@ img {
   background-color: #5496bd;
 }
 
+.rating-wrapper {
+  margin-left: auto;
+}
+
 .rating {
   background-color: #f2f2f2;
   color: #666666;
@@ -261,4 +272,26 @@ img {
 .sort-link:active {
   color: #000000;
   border: none;
+}
+
+.result-item {
+  display: flex;
+}
+
+.result-description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 258px;
+}
+
+.result-description > p {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.result-description > a {
+  flex-grow: 0;
+}
+
+.result-text > p {
+  display: inline-block;
 }
