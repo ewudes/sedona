@@ -61,16 +61,6 @@ body {
   text-align: center;
 }
 
-.offers > button {
-  width: 568px;
-}
-
-.offers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .reasons-descr {
   color: #333333;
 }
@@ -161,30 +151,48 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-brown {
+.button-trigger,
+.button-reservation {
   background-color: #766357;
 }
 
-.button-brown:hover,
-.button-brown:focus  {
+.button-trigger {
+  display: block;
+  width: 568px;
+  margin: 0 auto;
+}
+
+.button-trigger:hover,
+.button-trigger:focus,
+.button-reservation:hover,
+.button-reservation:focus {
   background-color: #604e43;
 }
 
-.button-brown:active {
+.button-reservation:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-blue {
+.button-search,
+.button-details {
   background-color: #81b3d2;
 }
 
-.button-blue:hover,
-.button-blue:focus  {
+.button-search {
+  display: block;
+  margin: 0 auto;
+}
+
+.button-search:hover,
+.button-search:focus,
+.button-details:hover,
+.button-details:focus  {
   background-color: #669ec0;
 }
 
-.button-blue:active {
+.button-search:active,
+.button-details:active {
   background-color: #5496bd;
 }
 
@@ -198,9 +206,8 @@ img {
 }
 
 .form-search {
-  display: flex;
-  flex-direction: column;
   width: 568px;
+  margin: 0 auto;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
