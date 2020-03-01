@@ -33,10 +33,10 @@
     <main>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр подбора жилья</h2>
-        <form>
-          <fieldset>
+        <form class="filter-form">
+          <fieldset class="filter-list">
             <legend>Инфраструктура:</legend>
-            <ul class="filter-list">
+            <ul>
               <li>
                 <input type="checkbox" id="infrastructure-pool" name="infrastructure-pool" checked>
                 <label for="infrastructure-pool" >Бассейн</label>
@@ -51,9 +51,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-list">
             <legend>Тип жилья:</legend>
-            <ul class="filter-list">
+            <ul>
               <li>
                 <input type="checkbox" id="type-hotel" name="type-hotel" checked>
                 <label for="type-hotel">Гостиница</label>
@@ -68,20 +68,22 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-range">
             <legend>Стоимость в сутки (р):</legend>
-            <label for="cost-from">От</label>
-            <input id="cost-from" type="text" placeholder="от 0">
-            <label for="cost-to">До</label>
-            <input id="cost-to" type="text" placeholder="до 3000">
+            <div>
+              <label for="cost-from">От</label>
+              <input id="cost-from" type="text" placeholder="от 0">
+              <label for="cost-to">До</label>
+              <input id="cost-to" type="text" placeholder="до 3000">
+            </div>
             <input type="range" min="0" max="3000" step="100" name="range">
+            <button type="button" class="button button-filter">Показать</button>
           </fieldset>
-          <button type="button" class="button button-filter">Показать</button>
         </form>
       </section>
       <section>
         <h2 class="visually-hidden">Результаты подбора жилья</h2>
-        <div>
+        <div class="filter-nav">
           <span>Найдено: 3</span>
           <span>Сортировка:</span>
           <ul class="sort-list">
