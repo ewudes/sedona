@@ -39,22 +39,44 @@ body {
   text-align: center;
 }
 
-.reasons ul {
+.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
 }
 
+.reasons-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reasons-item ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
 .reasons-item-blue {
+  width: 400px;
   background-color: #81b3d2;
   color: #ffffff;
 }
 
 .reasons-item-img {
-  background-color: #cccccc
+  background-color: #cccccc;
+  height: 100%;
 }
 
 .reasons-item-gray {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
   background-color: #eeeeee;
+}
+
+.reasons-sublist li {
+  width: 33.3%;
 }
 
 .offers >  p {
