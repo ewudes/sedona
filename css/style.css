@@ -71,6 +71,7 @@ body {
 .reasons-item-gray {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   width: 33.3%;
   background-color: #eeeeee;
 }
