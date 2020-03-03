@@ -21,6 +21,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.75);
@@ -33,10 +34,18 @@ body {
   color: #000000;
 }
 
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+}
+
 .reasons h2 {
   font-size: inherit;
   font-weight: 400;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .reasons-list {
@@ -80,6 +89,10 @@ body {
   width: 33.3%;
 }
 
+.offers {
+  position: relative;
+}
+
 .offers >  p {
   text-align: center;
 }
@@ -95,6 +108,7 @@ img {
 .title {
   font-size: 21px;
   font-weight: 700;
+  margin-top: 35px;
 }
 
 .maincontent > .title {
@@ -127,8 +141,38 @@ img {
 }
 
 .nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   list-style: none;
+  padding: 0;
+  margin: 0;
   font-weight: 700;
+}
+
+.nav-item {
+  text-align: center;
+  width: 220px;
+  min-height: 56px;
+}
+
+.nav-item:nth-child(n+2):nth-child(-n+3) {
+  width: 350px;
+}
+
+.nav-item:nth-child(2) .nav-link {
+  text-align: left;
+  padding-left: 70px;
+}
+
+.nav-item:nth-child(3) .nav-link {
+  text-align: right;
+  padding-right: 70px;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 0;
 }
 
 .nav-link:hover,
@@ -148,6 +192,9 @@ img {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+
 }
 
 .filter {
@@ -202,6 +249,14 @@ img {
   background-color: #81b3d2;
 }
 
+.button-trigger {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 40px;
+  padding: 30px 0;
+}
+
 .button-search {
   display: block;
   margin: 0 auto;
@@ -229,9 +284,22 @@ img {
 }
 
 .form-search {
+  position: absolute;
+  left: 50%;
   width: 568px;
   margin: 0 auto;
+  margin-left: -284px;
+  padding: 55px;
+  background-color: #ffffff;
+  box-sizing: border-box;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.form-item {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
 .form-item input[type="text"],
@@ -253,9 +321,20 @@ img {
   border: 2px solid #e5e5e5;
 }
 
+.button-calendar {
+  position: absolute;
+  top: 0;
+  font-size: 1px;
+}
+
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
+  background-color: #ffffff;
+  opacity: 0.9;
 }
 
 .social,
