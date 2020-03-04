@@ -298,7 +298,8 @@ img {
 .form-item {
   position: relative;
   display: block;
-  margin: 10px 0;
+  font-weight: 700;
+  margin-bottom: 30px;
   box-sizing: border-box;
 }
 
@@ -308,6 +309,7 @@ img {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border: none;
+  box-sizing: border-box;
 }
 
 .form-item input[type="text"]:hover,
@@ -321,10 +323,82 @@ img {
   border: 2px solid #e5e5e5;
 }
 
-.button-calendar {
+.checkin,
+.checkout {
+  width: 346px;
+  margin-left: 10px;
+  padding: 5px;
+  padding-right: 30px;
+}
+
+.input-people {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+}
+
+.item-people {
+  display: flex;
+}
+
+.label-people {
+  margin-right: 10px;
+}
+
+button.button-calendar {
+  display: block;
   position: absolute;
-  top: 0;
-  font-size: 1px;
+  top: 5px;
+  right: 15px;
+  font-size: 0;
+  width: 22px;
+  height: 23px;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+button.button-calendar:focus {
+  border: none;
+  opacity: 0.6;
+}
+
+button.button-remove,
+button.button-add {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.button-remove::after,
+.button-add::after,
+.button-remove::before,
+.button-add::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.button-remove::after,
+.button-add::after {
+  width: 12px;
+  height: 3px;
+  margin-left: -6px;
+  margin-top: -1.5px;
+}
+
+.button-add::before {
+  width: 3px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: -1.5px;
 }
 
 .footer {

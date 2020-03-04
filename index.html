@@ -97,25 +97,25 @@
           <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
             <p class="form-item">
               <label for="checkin">Дата заезда:</label>
-              <input id="checkin" type="text" name="checkin" placeholder="24 апреля 2017">
-              <button type="button">Календарь</button>
-            </p>
-            <p class="form-item">
-              <label for="checkout">Дата выезда:</label>
-              <input id="checkout" type="text" name="checkout" placeholder="04 июля 2017">
+              <input class="checkin" id="checkin" type="text" name="checkin" placeholder="24 апреля 2017">
               <button class="button-calendar" type="button">Календарь</button>
             </p>
             <p class="form-item">
-              <label for="adults">Взрослые:</label>
-              <button type="button">Убрать одного взрослого</button>
-              <input id="adults" type="text" name="adults" placeholder="2">
-              <button type="button">Добавить одного взрослого</button>
+              <label for="checkout">Дата выезда:</label>
+              <input class="checkout" id="checkout" type="text" name="checkout" placeholder="04 июля 2017">
+              <button class="button-calendar" type="button">Календарь</button>
             </p>
-            <p class="form-item">
-              <label for="children">Дети:</label>
-              <button type="button">Убрать одного ребенка</button>
-              <input id="children" type="text" name="children" placeholder="0">
-              <button type="button">Добавить одного ребенка</button>
+            <p class="form-item item-people">
+              <label class="label-people" for="adults">Взрослые:</label>
+              <button class="button-remove" type="button">Убрать одного взрослого</button>
+              <input class="input-people" id="adults" type="text" name="adults" placeholder="2">
+              <button class="button-add" type="button">Добавить одного взрослого</button>
+            </p>
+            <p class="form-item item-people">
+              <label class="label-people" for="children">Дети:</label>
+              <button class="button-remove" type="button">Убрать одного ребенка</button>
+              <input class="input-people" id="children" type="text" name="children" placeholder="0">
+              <button class="button-add" type="button">Добавить одного ребенка</button>
             </p>
             <button type="submit" class="button button-search">Найти</button>
           </form>
