@@ -438,17 +438,50 @@ button.button-add:active {
   opacity: 0.9;
 }
 
+.footer-tel {
+  display: block;
+}
+
 .social,
 .result-list,
 .sort-list,
 .scroll-list,
 .filter-list {
   list-style: none;
+  padding: 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social-item {
+  background-color: #81b3d2;
+  margin: 3px;
+  height: 48px;
 }
  
 .social-link {
+  display: block;
+  width: 46px;
+  height: 100%;
+  font-size: 0;
   color: #ffffff;
-  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link-tw {
+  background-image: url("../img/twitter.svg");
+}
+
+.social-link-fb {
+  background-image: url("../img/fb-icon.svg")
+}
+
+.social-link-yt {
+  background-image: url("../img/youtube.svg")
 }
 
 .social-link:hover,
@@ -458,6 +491,26 @@ button.button-add:active {
 
 .social-link:active {
   background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+.author-link,
+.logo-htmlacademy {
+  width: 115px;
+  height: 41px;
+  margin-left: 5px;
+}
+
+.author-link:hover .logo-htmlacademy path {
+  fill: #81b3d2;
+}
+
+.author-link:active .logo-htmlacademy path {
+  fill: #bdbbbc;
 }
 
 .rating-wrapper {
