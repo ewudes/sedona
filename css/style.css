@@ -30,7 +30,7 @@ body {
 
 .nav a,
 .title a,
-.scroll-list a {
+.sort-direction a {
   text-decoration: none;
   color: #000000;
 }
@@ -38,7 +38,7 @@ body {
 .logo {
   position: absolute;
   left: 50%;
-  margin-left: -70px;
+  transform: translateX(-50%);
 }
 
 .reasons h2 {
@@ -94,7 +94,7 @@ body {
   position: relative;
 }
 
-.offers >  p {
+.offers p {
   text-align: center;
 }
 
@@ -152,12 +152,20 @@ img {
 }
 
 .nav-item {
+  width: 300px;
   text-align: center;
-  width: 220px;
+  box-sizing: border-box;
+}
+
+
+.nav-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 239px;
   min-height: 56px;
 }
 
-.nav-item:nth-child(n+2):nth-child(-n+3) {
+/* .nav-item:nth-child(n+2):nth-child(-n+3) {
   width: 350px;
 }
 
@@ -174,7 +182,7 @@ img {
 .nav-link {
   display: block;
   padding: 15px 0;
-}
+} */
 
 .nav-link:hover,
 .nav-link:focus {
@@ -304,7 +312,7 @@ img {
   left: 50%;
   width: 568px;
   margin: 0 auto;
-  margin-left: -284px;
+  transform: translateX(-50%);
   padding: 55px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -326,34 +334,43 @@ img {
   width: 100px;
 }
 
-.form-item input[type="text"],
-.form-item button {
+.checkin,
+.checkout,
+.input-people,
+.button-add,
+.button-remove {
   font: inherit;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  border: none;
   border: 2px solid transparent;
   box-sizing: border-box;
 }
 
-.form-item input[type="text"]:hover,
-.form-item button:hover {
+.checkin:hover,
+.checkout:hover,
+.input-people:hover,
+.button-add:hover,
+.button-remove:hover {
   background-color: #ebebeb;
 }
 
-.form-item input[type="text"]:focus,
-.form-item button:focus {
+.checkin:focus,
+.checkout:focus,
+.input-people:focus,
+.button-add:focus,
+.button-remove:focus {
   background-color: transparent;
   border: 2px solid #e5e5e5;
 }
 
-input.checkin,
+.checkin,
 .checkout {
-  width: 346px;
-  margin-left: 8px;
+  width: 340px;
+  margin-left: 14px;
   padding: 5px;
   padding-left: 15px;
   padding-right: 45px;
+
 }
 
 .input-people {
@@ -365,40 +382,41 @@ input.checkin,
 .item-people {
   display: flex;
   align-items: center;
+  width: 50%;
 }
 
-label.label-adults,
-label.label-childern {
-  width: 80px;
+.label-adults,
+.label-childern {
   margin-right: 30px;
 }
 
-label.label-childern {
+.label-childern {
   text-align: right;
 }
 
-button.button-calendar {
+.button-calendar {
   display: block;
   position: absolute;
-  top: 7px;
+  top: 10px;
   right: 15px;
   font-size: 0;
   width: 22px;
-  height: 23px;
+  height: 22px;
   background-image: url("../img/calendar.svg");
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
   opacity: 0.3;
   cursor: pointer;
 }
-button.button-calendar:hover,
-button.button-calendar:focus {
+.button-calendar:hover,
+.button-calendar:focus {
   border: none;
   opacity: 0.6;
 }
 
-button.button-remove,
-button.button-add {
+.button-remove,
+.button-add {
   position: relative;
   width: 38px;
   height: 38px;
@@ -406,8 +424,8 @@ button.button-add {
   cursor: pointer;
 }
 
-button.button-remove:active,
-button.button-add:active {
+.button-remove:active,
+.button-add:active {
   opacity: 0.5;
 }
 
@@ -426,15 +444,13 @@ button.button-add:active {
 .button-add::after {
   width: 12px;
   height: 2px;
-  margin-left: -6px;
-  margin-top: -1px;
+  transform: translate(-50%, -50%);
 }
 
 .button-add::before {
   width: 2px;
   height: 12px;
-  margin-top: -6px;
-  margin-left: -1px;
+  transform: translate(-50%, -50%);
 }
 
 .footer {
@@ -454,7 +470,7 @@ button.button-add:active {
 .social,
 .result-list,
 .sort-list,
-.scroll-list,
+.sort-direction,
 .filter-list {
   list-style: none;
   padding: 0;
@@ -493,13 +509,16 @@ button.button-add:active {
   background-image: url("../img/youtube.svg")
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-item:hover,
+.social-item:focus {
   background-color: #669ec0;
 }
 
-.social-link:active {
+.social-item:active {
   background-color: #5496bd;
+}
+
+.social-link:active {
   opacity: 0.3;
 }
 
@@ -524,8 +543,24 @@ button.button-add:active {
 
 .rating-wrapper {
   margin-left: auto;
-  width: 110px;
+  min-width: 110px;
   text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  padding: 0;
+}
+
+.star {
+  width: 18px;
+  height: 17px;
+  margin: 0 3px;
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .rating {
@@ -597,10 +632,10 @@ button.button-add:active {
 }
 
 .sort-list > li,
-.scroll-list > li {
+.sort-direction > li {
   display: inline-block;
 }
 
-.scroll-list {
+.sort-direction {
   margin-left: auto;
 }
