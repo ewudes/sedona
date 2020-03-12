@@ -37,6 +37,7 @@ body {
 
 .logo {
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -177,25 +178,6 @@ img {
   align-self: center;
 }
 
-/* .nav-item:nth-child(n+2):nth-child(-n+3) {
-  width: 350px;
-}
-
-.nav-item:nth-child(2) .nav-link {
-  text-align: left;
-  padding-left: 70px;
-}
-
-.nav-item:nth-child(3) .nav-link {
-  text-align: right;
-  padding-right: 70px;
-}
-
-.nav-link {
-  display: block;
-  padding: 15px 0;
-} */
-
 .nav-link:hover,
 .nav-link:focus {
   color: #81b3d2;
@@ -321,6 +303,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   position: absolute;
+  top: 100%;
   left: 50%;
   width: 568px;
   transform: translateX(-50%);
@@ -422,7 +405,6 @@ img {
 }
 .button-calendar:hover,
 .button-calendar:focus {
-  border: none;
   opacity: 0.6;
 }
 
@@ -467,6 +449,7 @@ img {
 .footer {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -475,8 +458,7 @@ img {
 }
 
 .footer-catalog {
-  position: sticky;
-  top: 100%;
+
 }
 
 .footer-tel {
