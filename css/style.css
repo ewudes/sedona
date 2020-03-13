@@ -546,19 +546,24 @@ img {
 }
 
 .stars {
-  display: flex;
-  justify-content: end;
-  list-style: none;
-  padding: 0;
-}
-
-.star {
-  width: 18px;
   height: 17px;
+  font-size: 0;
   margin: 0 3px;
   background-image: url("../img/star.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: repeat-x;
+  margin-left: auto;
+}
+
+.four-stars {
+  width: 72px;
+}
+
+.three-stars {
+  width: 54px;
+}
+
+.two-stars {
+  width: 36px;
 }
 
 .rating {
