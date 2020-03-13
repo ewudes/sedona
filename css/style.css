@@ -315,12 +315,14 @@ img {
   margin: 0;
   margin-bottom: 30px;
   box-sizing: border-box;
+  text-align: left;
 }
 
-.form-item label {
+.label {
   display: inline-block;
   vertical-align: baseline;
   width: 100px;
+  text-align: left;
 }
 
 .checkin,
