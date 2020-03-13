@@ -153,29 +153,25 @@ img {
 }
 
 .nav-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 240px;
   min-height: 56px;
   box-sizing: border-box;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .nav-item:nth-child(2) {
   margin-right: 100px;
 }
 
-.text-left {
-  justify-content: flex-start;
+.nav-item:nth-child(1),
+.nav-item:nth-child(2) {
+  text-align: left;
 }
 
-.text-right {
-  justify-content: flex-end;
-}
-
-.nav-link {
-
-  align-self: center;
+.nav-item:nth-child(3),
+.nav-item:nth-child(4) {
+  text-align: right;
 }
 
 .nav-link:hover,
