@@ -572,6 +572,10 @@ img {
   margin-left: auto;
 }
 
+.five-stars {
+  width: 90px;
+}
+
 .four-stars {
   width: 72px;
 }
@@ -582,6 +586,10 @@ img {
 
 .two-stars {
   width: 36px;
+}
+
+.one-star {
+  width: 18px;
 }
 
 .rating {
