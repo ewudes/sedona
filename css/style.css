@@ -270,6 +270,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 25px 70px 5px;
 }
 
 .button {
@@ -353,6 +354,10 @@ img {
 
 .button-filter {
   background-color: transparent;
+  border: 2px solid #ffffff;
+  align-self: center;
+  margin-top: 20px;
+  padding: 5px 30px;
 }
 
 .button-filter:hover {
@@ -715,12 +720,68 @@ img {
 
 .filter-list ul {
   list-style: none;
+  padding: 0;
+}
+
+.filter-list li {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.infrastructure {
+  margin-right: 110px;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .filter-range {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: auto;
+}
+
+.filter-input {
+  width: 153px;
+  height: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.filter-from {
+  border-right: none;
+}
+
+.filter-inputs {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.filter-inputs::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.filter-to {
+  border-left: none;
+  transform: translateX(-4px);
 }
 
 .filter-nav {
