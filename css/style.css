@@ -60,6 +60,34 @@ body {
 .reasons-item {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.reasons-item-title {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.reasons-item-description {
+  margin: 0 50px;
+  margin-top: 20px;
+}
+
+.reasons-item-number {
+  
+}
+
+.reasons-item-number::after,
+.reasons-item-number::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+h3.reasons-item-title {
+  margin-top: 45px;
 }
 
 .reasons-item ul {
@@ -136,10 +164,10 @@ img {
   align-items: center;
   min-height: 530px;
   background-color: #cccccc;
-  background-image: url("../img/bg.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/polygon.svg"), url("../img/bg.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
 }
 
 .nav-list {
