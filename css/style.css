@@ -667,6 +667,7 @@ img {
 .rating {
   background-color: #f2f2f2;
   color: #666666;
+  margin-top: 35px;
 }
 
 .result-item {
@@ -824,7 +825,7 @@ legend {
   position: relative;
   display: inline-block;
   width: 20px;
-  height: 30px;
+  height: 10px;
 }
 
 .sort-direction-item a {
@@ -834,8 +835,8 @@ legend {
 }
 
 .sort-top {
-  left: 10px;
-  top: -15px;
+  left: 4px;
+  top: -18px;
   border-bottom: 10px solid #cacaca;
 }
 
@@ -852,8 +853,8 @@ legend {
 }
 
 .sort-bottom {
-  left: 10px;
-  top: 10px;
+  left: 7px;
+  top: 7px;
   border-top: 10px solid #cacaca;
 }
 
@@ -867,4 +868,8 @@ legend {
 
 .direction-bottom-active {
   border-top-color: #81b3d2;
+}
+
+.result-list {
+  margin: 0;
 }
