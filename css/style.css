@@ -63,9 +63,11 @@ body {
   text-align: center;
 }
 
-.reasons-item-title {
+.reasons-item-title,
+.reasons-item-subtitle {
   font-size: 21px;
   line-height: 21px;
+  margin: 40px 120px 20px;
 }
 
 .reasons-item-description {
@@ -83,23 +85,19 @@ body {
   background-color: #ffffff;
 }
 
-h3.reasons-item-title {
-  margin-top: 45px;
-}
-
 .reasons-sublist li{
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 75px;
 }
 
-h4.reasons-item-title {
+.reasons-item-subtitle {
   margin-top: 155px;
 }
 
-h4.reasons-item-title::after {
+.reasons-item-subtitle::after {
   content: '';
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 76px;
@@ -151,7 +149,7 @@ h4.reasons-item-title::after {
 }
 
 .reasons-item-gray .reasons-item-description {
-  margin: 15px 60px 60px;
+  margin: 15px 60px 50px;
 }
 
 .reasons-sublist li {
@@ -177,7 +175,7 @@ img {
 .title {
   font-size: 21px;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 55px;
 }
 
 .maincontent > .title {
@@ -201,7 +199,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 512px;
+  height: 512px;
   background-color: #cccccc;
   background-image: url("../img/polygon.svg"), url("../img/bg.jpg");
   background-position: center bottom, center top;
@@ -270,7 +268,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 25px 67px 5px;
+  padding: 25px 67px 25px;
 }
 
 .button {
@@ -291,12 +289,6 @@ img {
 .button-reservation {
   background-color: #766357;
   text-decoration: none;
-}
-
-.button-trigger {
-  display: block;
-  width: 568px;
-  margin: 0 auto;
 }
 
 .button-trigger:hover,
@@ -324,10 +316,13 @@ img {
 }
 
 .button-trigger {
+  display: block;
+  width: 568px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  margin-top: 40px;
+  margin: 0 auto;
+  margin-top: 45px;
   padding: 30px 0;
 }
 
@@ -335,7 +330,7 @@ img {
   display: block;
   width: 100%;
   height: 58px;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   font-size: 21px;
   font-weight: 700;
 }
@@ -460,7 +455,7 @@ img {
 .button-calendar {
   display: block;
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 15px;
   font-size: 0;
   width: 22px;
@@ -531,7 +526,7 @@ img {
 .hashtag {
   font-size: 21px;
   font-weight: 700;
-  margin-top: 40px ;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 
@@ -707,13 +702,15 @@ img {
 .filter-list ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .filter-list li {
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
 
-fieldset {
+.filter-list,
+.filter-range {
   border: none;
   padding: 0;
 }
@@ -722,7 +719,7 @@ fieldset {
   margin-right: 110px;
 }
 
-legend {
+.grade {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -736,18 +733,18 @@ legend {
 }
 
 .filter-input {
-  width: 153px;
-  height: 30px;
+  width: 158px;
+  height: 35px;
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
-  text-align: center;
   text-transform: uppercase;
   box-sizing: border-box;
 }
 
 .filter-from {
   border-right: none;
+  padding-left: 85px;
 }
 
 .filter-inputs {
@@ -758,10 +755,10 @@ legend {
 .filter-inputs::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 18px;
   left: 50%;
   width: 2px;
-  height: 22px;
+  height: 20px;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -769,20 +766,20 @@ legend {
 .filter-from-label,
 .filter-to-label {
   position: absolute;
-  top: 50%;
+  top: 18px;
   transform: translateY(-50%)
 }
 
 .filter-from-label {
-  left: 50px;
+  left: 65px;
 }
 
 .filter-to-label {
-  left: 200px;
+  left: 212px;
 }
 
 .filter-to {
-  padding-left: 40px;
+  padding-left: 75px;
   border-left: none;
   transform: translateX(-4px);
   box-sizing: border-box;
@@ -790,7 +787,7 @@ legend {
 
 .filter-nav {
   display: flex;
-  padding: 30px 70px;
+  padding: 30px 70px 22px;
 }
 
 .filter-nav-title {
@@ -808,8 +805,7 @@ legend {
   margin: 0;
 }
 
-.sort-list > li,
-.sort-direction > li {
+.sort-list > li {
   display: inline-block;
 }
 
@@ -839,23 +835,21 @@ legend {
   margin-left: auto;
 }
 
-.sort-direction-item {  
-  position: relative;
+.sort-direction-item {
   display: inline-block;
-  width: 20px;
-  height: 10px;
 }
 
 .sort-direction-item a {
-  position: absolute;
+  display: inline-block;
+  height: 0;
 	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
+  border-right: 5px solid transparent;
 }
 
 .sort-top {
-  left: 4px;
-  top: -18px;
   border-bottom: 10px solid #cacaca;
+  height: 0;
+  transform: translate(-18px, 2px);
 }
 
 .sort-top:hover {
@@ -871,9 +865,8 @@ legend {
 }
 
 .sort-bottom {
-  left: 7px;
-  top: 7px;
   border-top: 10px solid #cacaca;
+  transform: translateY(11px);
 }
 
 .sort-bottom:hover {
