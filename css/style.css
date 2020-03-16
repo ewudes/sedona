@@ -75,7 +75,7 @@ body {
 
 .reasons-item-number::after,
 .reasons-item-number::before {
-  content: ' ';
+  content: '';
   display: inline-block;
   margin: 4px 5px;
   width: 9px;
@@ -97,7 +97,7 @@ h4.reasons-item-title {
 }
 
 h4.reasons-item-title::after {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 60px;
   left: 50%;
@@ -270,7 +270,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 25px 70px 5px;
+  padding: 25px 67px 5px;
 }
 
 .button {
@@ -743,6 +743,7 @@ legend {
   border: 2px solid #ffffff;
   text-align: center;
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 .filter-from {
@@ -755,7 +756,7 @@ legend {
 }
 
 .filter-inputs::after {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -765,9 +766,26 @@ legend {
   transform: translate(-50%, -50%);
 }
 
+.filter-from-label,
+.filter-to-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.filter-from-label {
+  left: 50px;
+}
+
+.filter-to-label {
+  left: 200px;
+}
+
 .filter-to {
+  padding-left: 40px;
   border-left: none;
   transform: translateX(-4px);
+  box-sizing: border-box;
 }
 
 .filter-nav {
