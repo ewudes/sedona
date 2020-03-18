@@ -279,7 +279,7 @@ img {
   color: #ffffff;
   background-color: #3d3d3d;
   background-image: url("../img/bg-filter.jpg");
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 25px 67px 15px;
@@ -362,6 +362,7 @@ img {
 }
 
 .button-filter {
+  display: block;
   background-color: transparent;
   border: 2px solid #ffffff;
   align-self: center;
@@ -754,8 +755,26 @@ img {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 100%;
-  height: 2px;
+  width: 158px;
+  background-color: transparent;
+  height: 22px;
+  box-sizing: border-box;
+}
+
+/* Firefox */
+
+.input-range::-moz-range-track {
+  -moz-appearance: none;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.input-range-from::-moz-range-track {
+  transform: translateX(2px);
+}
+
+.input-range-to::-moz-range-track {
+  transform: translateX(-2px);
 }
 
 .input-range::-moz-range-thumb {
@@ -766,8 +785,47 @@ img {
   border-radius: 50%;
 }
 
+/* Chrome */
+
+.input-range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.input-range-from::-webkit-slider-runnable-track {
+  transform: translateX(2px);
+}
+
+.input-range-to::-webkit-slider-runnable-track {
+  transform: translateX(-2px);
+}
+
 .input-range::-webkit-slider-thumb {
   -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/filter-button.svg');
+  border-radius: 50%;
+  transform: translateY(-10px);
+}
+
+/* IE */
+
+.input-range::-ms-fill-lower{
+  height: 10px;
+  background-color: #ffffff;
+}
+
+.input-range-from::-ms-fill-lower {
+  /* transform: translateX(2px); */
+}
+
+.input-range-to::-ms-fill-lower {
+  /* transform: translateX(-2px); */
+}
+
+.input-range::-ms-thumb {
   width: 20px;
   height: 20px;
   background-image: url('../img/filter-button.svg');
@@ -799,14 +857,12 @@ img {
 }
 
 .filter-checkbox:disabled + .filter-label::before {
-  background-image: url('../img/checkbox-off.svg');
-  opacity: 0.3;
+  background-image: url('../img/checkbox-off-dis.svg');
 }
 
 
 .filter-checkbox:checked:disabled + .filter-label::before {
-  background-image: url('../img/checkbox-on.svg');
-  opacity: 0.3;
+  background-image: url('../img/checkbox-on-dis.svg');
 }
 
 .grade {
@@ -823,6 +879,7 @@ img {
   position: relative;
   display: -webkit-box;
   display: flex;
+  width: 320px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
@@ -837,6 +894,14 @@ img {
   border: 2px solid #ffffff;
   text-transform: uppercase;
   box-sizing: border-box;
+}
+
+.filter-input::-moz-placeholder {
+  opacity: 1;
+}
+
+.filter-input::-webkit-input-placeholder {
+  color: #fff;
 }
 
 .filter-from {
