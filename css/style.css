@@ -366,9 +366,8 @@ img {
   background-color: transparent;
   border: 2px solid #ffffff;
   align-self: center;
-  margin: auto;
-  margin-top: 30px;
-  padding: 5px 30px;
+  margin: 0 auto;
+  padding: 3px 30px;
 }
 
 .button-filter:hover {
@@ -755,10 +754,11 @@ img {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 158px;
+  width: 100%;
   background-color: transparent;
   height: 22px;
-  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 23px;
 }
 
 /* Firefox */
@@ -767,14 +767,6 @@ img {
   -moz-appearance: none;
   height: 1px;
   background-color: #ffffff;
-}
-
-.input-range-from::-moz-range-track {
-  transform: translateX(2px);
-}
-
-.input-range-to::-moz-range-track {
-  transform: translateX(-2px);
 }
 
 .input-range::-moz-range-thumb {
@@ -793,14 +785,6 @@ img {
   background-color: #ffffff;
 }
 
-.input-range-from::-webkit-slider-runnable-track {
-  transform: translateX(2px);
-}
-
-.input-range-to::-webkit-slider-runnable-track {
-  transform: translateX(-2px);
-}
-
 .input-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -812,22 +796,20 @@ img {
 
 /* IE */
 
-.input-range::-ms-fill-lower{
-  height: 10px;
+.input-range::-ms-track {
+  height: 2px;
   background-color: #ffffff;
 }
 
-.input-range-from::-ms-fill-lower {
-  /* transform: translateX(2px); */
-}
-
-.input-range-to::-ms-fill-lower {
-  /* transform: translateX(-2px); */
+.input-range::-ms-fill-lower{
+  background-color: #ffffff;
 }
 
 .input-range::-ms-thumb {
+  border: none;
   width: 20px;
-  height: 20px;
+  height: 21px;
+  transform: translateX(10px);
   background-image: url('../img/filter-button.svg');
   border-radius: 50%;
 }
@@ -911,7 +893,7 @@ img {
 
 .filter-inputs {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .filter-inputs::after {
