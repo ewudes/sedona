@@ -441,12 +441,12 @@ img {
 
 .checkin,
 .checkout {
+  display: inline-block;
+  min-height: 35px;
   width: 340px;
   margin-left: 14px;
-  padding: 5px;
   padding-left: 15px;
   padding-right: 45px;
-
 }
 
 .input-people {
@@ -475,8 +475,9 @@ img {
 .button-calendar {
   display: block;
   position: absolute;
-  top: 7px;
-  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
   font-size: 0;
   width: 22px;
   height: 22px;
@@ -741,77 +742,12 @@ img {
 }
 
 .filter-list li {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .filter-list,
 .filter-range {
   border: none;
-  padding: 0;
-}
-
-.input-range {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  background-color: transparent;
-  height: 22px;
-  padding: 0;
-  margin-bottom: 23px;
-}
-
-/* Firefox */
-
-.input-range::-moz-range-track {
-  -moz-appearance: none;
-  height: 1px;
-  background-color: #ffffff;
-}
-
-.input-range::-moz-range-thumb {
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  background-image: url('../img/filter-button.svg');
-  border-radius: 50%;
-}
-
-/* Chrome */
-
-.input-range::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  height: 1px;
-  background-color: #ffffff;
-}
-
-.input-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background-image: url('../img/filter-button.svg');
-  border-radius: 50%;
-  transform: translateY(-10px);
-}
-
-/* IE */
-
-.input-range::-ms-track {
-  height: 2px;
-  background-color: #ffffff;
-}
-
-.input-range::-ms-fill-lower{
-  background-color: #ffffff;
-}
-
-.input-range::-ms-thumb {
-  border: none;
-  width: 20px;
-  height: 21px;
-  transform: translateX(10px);
-  background-image: url('../img/filter-button.svg');
-  border-radius: 50%;
 }
 
 .infrastructure {
@@ -820,7 +756,7 @@ img {
 
 .filter-label {
   position: relative;
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
 .filter-label::before {
@@ -830,27 +766,32 @@ img {
   left: 0;
   width: 26px;
   height: 23px;
-  background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
 }
 
-.filter-checkbox:checked + .filter-label::before {
-  background-image: url('../img/checkbox-on.svg');
+.filter-checkbox + * .check-off,
+.filter-checkbox:checked + * .check-on {
+  fill: #ffffff;
 }
 
-.filter-checkbox:disabled + .filter-label::before {
-  background-image: url('../img/checkbox-off-dis.svg');
+.filter-checkbox:checked + * .check-off {
+  fill: transparent;
 }
 
-
-.filter-checkbox:checked:disabled + .filter-label::before {
-  background-image: url('../img/checkbox-on-dis.svg');
+.filter-checkbox:disabled + * .check-off,
+.filter-checkbox:checked:disabled + * .check-on {
+  fill: #6a6a6a;
 }
+
+.filter-checkbox:checked:disabled + * .check-off {
+  fill: transparent;
+}
+
 
 .grade {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .grade-range {
@@ -866,9 +807,11 @@ img {
   -webkit-box-direction: normal;
           flex-direction: column;
   margin-left: auto;
+  padding: 0;
 }
 
 .filter-input {
+  -moz-user-select: disabled;
   width: 158px;
   height: 35px;
   background-color: transparent;
@@ -878,14 +821,6 @@ img {
   box-sizing: border-box;
 }
 
-.filter-input::-moz-placeholder {
-  opacity: 1;
-}
-
-.filter-input::-webkit-input-placeholder {
-  color: #fff;
-}
-
 .filter-from {
   border-right: none;
   padding-left: 85px;
@@ -893,7 +828,7 @@ img {
 
 .filter-inputs {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .filter-inputs::after {
@@ -946,6 +881,48 @@ img {
 .filter-nav-sorting {
   font-size: 12px;
   margin: 0 50px;
+}
+
+.filter-control {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.scale {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bar {
+  width: 80%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  display: block;
+  position: absolute;
+  top: -9px;
+  width: 5px;
+  height: 5px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-sizing: initial;
+  padding: 0;
+}
+
+.range-toggle:hover {
+  background-color: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
 }
 
 .sort-list {
