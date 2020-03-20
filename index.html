@@ -97,12 +97,12 @@
           <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
             <p class="form-item">
               <label class="label" for="checkin">Дата заезда:</label>
-              <input class="checkin" id="checkin" type="text" name="checkin" placeholder="24 апреля 2017">
+              <input class="date checkin" id="checkin" type="text" name="checkin" placeholder="24 апреля 2017" required>
               <button class="button-calendar" type="button">Календарь</button>
             </p>
             <p class="form-item">
               <label class="label" for="checkout">Дата выезда:</label>
-              <input class="checkout" id="checkout" type="text" name="checkout" placeholder="04 июля 2017">
+              <input class="date checkout" id="checkout" type="text" name="checkout" placeholder="04 июля 2017" required>
               <button class="button-calendar" type="button">Календарь</button>
             </p>
             <p class="form-item item-people">
@@ -149,5 +149,6 @@
         </p>
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
