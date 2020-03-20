@@ -5,7 +5,7 @@ var date = document.querySelector(".date");
 
 trigger.addEventListener("click", function(evt) {
     evt.preventDefault();
-    modal.classList.toggle("form-search-show");
+    modal.classList.toggle("form-search-hide");
 });
 
 form.addEventListener("submit", function(evt) {
