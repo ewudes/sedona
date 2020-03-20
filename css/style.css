@@ -393,12 +393,19 @@ img {
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  animation: show 0.3s;
 }
 
 .form-search-hide {
   max-height: 0;
+
+}
+
+.animated-hide {
   animation: hide 0.3s;
+}
+
+.animated-add {
+  animation: show 0.3s;
 }
 
 .form-item {
