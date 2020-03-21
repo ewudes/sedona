@@ -82,6 +82,7 @@ body {
 .reasons-item-number::before {
   content: '';
   display: inline-block;
+  vertical-align: baseline;
   margin: 4px 5px;
   width: 9px;
   height: 2px;
@@ -325,7 +326,7 @@ img {
 
 .button-details,
 .button-reservation {
-  padding: 4px 14px;
+  padding: 4px 16px;
   margin-right: 6px;
 }
 
@@ -377,6 +378,7 @@ img {
 }
 
 .form-search {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -401,11 +403,13 @@ img {
 }
 
 .animated-hide {
-  animation: hide 0.3s;
+  -webkit-animation: hide 0.3s;
+          animation: hide 0.3s;
 }
 
 .animated-add {
-  animation: show 0.3s;
+  -webkit-animation: show 0.3s;
+          animation: show 0.3s;
 }
 
 .form-item {
@@ -460,7 +464,6 @@ img {
 
 .checkin,
 .checkout {
-  display: inline-block;
   min-height: 35px;
   width: 340px;
   margin-left: 14px;
@@ -570,8 +573,8 @@ img {
 .hashtag {
   font-size: 21px;
   font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 39px;
+  margin-bottom: 37px;
 }
 
 .footer-tel {
@@ -745,6 +748,7 @@ img {
 
 .result-text > p {
   display: inline-block;
+  vertical-align: baseline;
   min-width: 90px;
   margin: 3px 0;
   margin-right: 20px;
@@ -780,7 +784,9 @@ img {
 }
 
 .filter-label svg {
-  transform: translateY(6px);
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  margin-right: 6px;
 }
 
 .filter-checkbox + * .check-off,
@@ -951,6 +957,7 @@ img {
 
 .sort-list > li {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .sort-link {
@@ -981,10 +988,12 @@ img {
 
 .sort-direction-item {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .sort-direction-item a {
   display: inline-block;
+  vertical-align: baseline;
   height: 0;
 	border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -993,8 +1002,8 @@ img {
 .sort-top {
   border-bottom: 10px solid #cacaca;
   height: 0;
-  -webkit-transform: translate(-18px, 2px);
-          transform: translate(-18px, 2px);
+  -webkit-transform: translate(-18px, -4px);
+          transform: translate(-18px, -4px);
 }
 
 .sort-top:hover {
@@ -1011,8 +1020,8 @@ img {
 
 .sort-bottom {
   border-top: 10px solid #cacaca;
-  -webkit-transform: translateY(11px);
-          transform: translateY(11px);
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 .sort-bottom:hover {
@@ -1029,6 +1038,28 @@ img {
 
 .result-list {
   margin: 0;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    max-height: 700px;
+  }
+
+  25% {
+    max-height: 600px;
+  }
+
+  50% {
+    max-height: 400px;
+  }
+
+  75% {
+    max-height: 150px;
+  }
+
+  100% {
+    max-height: 0;
+  }
 }
 
 @keyframes hide {
@@ -1050,6 +1081,28 @@ img {
 
   100% {
     max-height: 0;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    max-height: 0;
+  }
+
+  25% {
+    max-height: 150px;
+  }
+
+  50% {
+    max-height: 400px;
+  }
+
+  75% {
+    max-height: 600px;
+  }
+
+  100% {
+    max-height: 700px;
   }
 }
 
