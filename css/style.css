@@ -91,6 +91,7 @@ body {
 
 .reasons-sublist li{
   position: relative;
+  width: 33.3%;
   padding-bottom: 75px;
 }
 
@@ -123,9 +124,10 @@ body {
   content: url('../img/icon-2.svg')
 }
 
-.reasons-item ul {
+.reasons-sublist {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
 }
@@ -160,10 +162,6 @@ body {
 
 .reasons-item-gray .reasons-item-description {
   margin: 15px 60px 50px;
-}
-
-.reasons-sublist li {
-  width: 33.3%;
 }
 
 .offers {
@@ -388,7 +386,7 @@ img {
   left: 50%;
   width: 568px;
   padding: 0 55px;
-  max-height: 500;
+  max-height: 500px;
   overflow: hidden;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -407,9 +405,14 @@ img {
           animation: hide 0.3s;
 }
 
-.animated-add {
+.animated-show {
   -webkit-animation: show 0.3s;
           animation: show 0.3s;
+}
+
+.form-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .form-item {
@@ -455,11 +458,21 @@ img {
 
 .checkin:focus,
 .checkout:focus,
-.input-people:focus,
-.button-add:focus,
-.button-remove:focus {
+.input-people:focus {
   background-color: transparent;
   border: 2px solid #e5e5e5;
+}
+
+.button-add:hover::after,
+.button-remove:hover::after,
+.button-add:hover::before {
+  background-color: #000000;
+}
+
+.button-add:active::after,
+.button-remove:active::after,
+.button-add:active::before {
+  background-color: #81b3d2;
 }
 
 .checkin,
@@ -468,7 +481,17 @@ img {
   width: 340px;
   margin-left: 14px;
   padding-left: 15px;
-  padding-right: 45px;
+  padding-right: 40px;
+}
+
+.checkin::-moz-placeholder,
+.checkout::-moz-placeholder {
+  opacity: 1;
+}
+
+.checkin::-webkit-input-placeholder,
+.checkout::-webkit-input-placeholder {
+  color: #000000;
 }
 
 .input-people {
@@ -498,21 +521,23 @@ img {
   display: block;
   position: absolute;
   top: 50%;
+  right: 10px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 10px;
   font-size: 0;
+  background-color: transparent;
   width: 22px;
   height: 22px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 0;
   border: none;
-  opacity: 0.3;
 }
-.button-calendar:hover,
-.button-calendar:focus {
-  opacity: 0.6;
+
+.button-calendar:hover .button-calendar-icon {
+  fill: #000000;
+}
+
+.button-calendar:active .button-calendar-icon {
+  fill: #81b3d2;
 }
 
 .button-remove,
@@ -523,14 +548,8 @@ img {
   font-size: 0;
 }
 
-.button-remove:active,
-.button-add:active {
-  opacity: 0.5;
-}
-
 .button-remove::after,
 .button-add::after,
-.button-remove::before,
 .button-add::before {
   position: absolute;
   top: 50%;
@@ -1040,6 +1059,10 @@ img {
   margin: 0;
 }
 
+.hide-map {
+  display: none;
+}
+
 @-webkit-keyframes hide {
   0% {
     max-height: 700px;
@@ -1125,5 +1148,61 @@ img {
 
   100% {
     max-height: 700px;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    color: #FF7373;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+    color: #FF7373;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    color: #FF7373;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    color: #FF7373;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+    color: #FF7373;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    color: #FF7373;
   }
 }

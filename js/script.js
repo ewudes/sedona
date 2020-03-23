@@ -1,24 +1,43 @@
 var trigger = document.querySelector(".button-trigger");
-var modal = document.querySelector(".form-search");
 var form = document.querySelector("form");
-var date = document.querySelector(".date");
+var checkin = document.querySelector(".checkin");
+var checkinItem = document.querySelector(".form-item-checkin");
+var checkout = document.querySelector(".checkout");
+var checkoutItem = document.querySelector(".form-item-checkout");
+var imgMap = document.querySelector(".img-map");
+var iframeMap = document.querySelector(".iframe-map");
+var item = document.querySelector(".form-item");
 
-modal.classList.add("form-search-hide");
+form.classList.add("form-search-hide");
 
-trigger.addEventListener("click", function() {
-    if (modal.classList.contains("form-search-hide")) {
-        modal.classList.remove("animated-hide");
-        modal.classList.remove("form-search-hide");
-        modal.classList.add("animated-add");
-    } else {
-        modal.classList.remove("animated-add");
-        modal.classList.add("form-search-hide");
-        modal.classList.add("animated-hide");
+form.addEventListener("submit", function(evt) {
+    if (!checkin.value) {
+        evt.preventDefault();
+        checkinItem.classList.remove("form-error");
+        checkinItem.offsetWidth = checkinItem.offsetWidth;
+        checkinItem.classList.add("form-error");
+    } 
+    if (!checkout.value) {
+        evt.preventDefault();
+        checkoutItem.classList.remove("form-error");
+        checkoutItem.offsetWidth = checkoutItem.offsetWidth;
+        checkoutItem.classList.add("form-error");
     }
 });
 
-form.addEventListener("submit", function(evt) {
-    if (!date.value) {
-        evt.preventDefault();
-    } 
+trigger.addEventListener("click", function() {
+    if (form.classList.contains("form-search-hide")) {
+        form.classList.remove("animated-hide");
+        form.classList.remove("form-search-hide");
+        form.classList.add("animated-show");
+    } else {
+        form.classList.remove("animated-show");
+        form.classList.add("form-search-hide");
+        form.classList.add("animated-hide");
+    }
+});
+
+iframeMap.addEventListener('load', function () {
+    imgMap.classList.add("hide-map");
+    iframeMap.classList.remove("hide-map");
 });
