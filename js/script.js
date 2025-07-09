@@ -16,7 +16,7 @@ form.addEventListener("submit", function(evt) {
         checkinItem.classList.remove("form-error");
         checkinItem.offsetWidth = checkinItem.offsetWidth;
         checkinItem.classList.add("form-error");
-    } 
+    }
     if (!checkout.value) {
         evt.preventDefault();
         checkoutItem.classList.remove("form-error");
