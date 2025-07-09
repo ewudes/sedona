@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 const { src, dest, watch, series, parallel } = gulp;
+import gulpPug from 'gulp-pug';
 
 import sass from 'gulp-sass';
 import dartSass from 'sass';
@@ -13,75 +14,94 @@ import browserSyncLib from 'browser-sync';
 const browserSync = browserSyncLib.create();
 import { rm } from 'fs/promises';
 
-import imagemin from 'gulp-imagemin';
 import rename from 'gulp-rename';
 
 const paths = {
-  html: 'src/*.html',
-  styles: 'src/scss/**/*.scss',
-  scripts: 'src/js/**/*.js',
-  images: 'src/assets/img/**/*',
-  // fonts: 'src/assets/fonts/**/*'
+  pug: {
+    src: 'src/pug/**/*.pug',
+    dest: 'dist/',
+  },
+  styles: {
+    src: 'src/scss/**/*.scss',
+    dest: 'dist/css/',
+  },
+  scripts: {
+    src: 'src/js/**/*.js',
+    dest: 'dist/js/',
+  },
+  images: {
+    src: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif,webp}',
+    dest: 'dist/assets/img/',
+  },
+  fonts: {
+    src: 'src/assets/fonts/**/*.{woff,woff2}',
+    dest: 'dist/assets/fonts/',
+  },
 };
 
 export async function clean() {
   await rm('dist', { recursive: true, force: true });
 }
 
-export function html() {
-  return src(paths.html)
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream());
+export function templates() {
+  return src(paths.pug.src)
+    .pipe(gulpPug({ pretty: true }))
+    .pipe(dest(paths.pug.dest));
 }
 
 export function styles() {
-  return src(paths.styles)
+  return src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sassCompiler().on('error', sassCompiler.logError))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/css'))
+    .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
 
 export function scripts() {
-  return src(paths.scripts)
+  return src(paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/js'))
+    .pipe(dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 }
 
 export function images() {
-  return src(paths.images)
-    .pipe(dest('dist/assets/img'));
+  return src(paths.images.src)
+    .pipe(dest(paths.images.dest));
 }
 
-// export function fonts() {
-//   return src(paths.fonts)
-//     .pipe(dest('dist/assets/fonts'));
-// }
+export function fonts() {
+  return src(paths.fonts.src)
+    .pipe(dest(paths.fonts.dest));
+}
 
 export function serve() {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'dist',
     },
-    notify: false
+    notify: false,
+    port: 3000,
   });
 
-  watch(paths.html, html);
-  watch(paths.styles, styles);
-  watch(paths.scripts, scripts);
-  watch(paths.images, images);
-  // watch(paths.fonts, fonts);
+  watch(paths.pug.src, series(templates)).on('change', browserSync.reload);
+  watch(paths.styles.src, styles);
+  watch(paths.scripts.src, scripts);
+  watch(paths.images.src, series(images)).on('change', browserSync.reload);
+  watch(paths.fonts.src, series(fonts)).on('change', browserSync.reload);
 }
 
-export default series(
+export const build = series(
   clean,
-  parallel(html, styles, scripts, images),
+  parallel(templates, styles, scripts, images, fonts)
+);
+
+export default series(
+  build,
   serve
 );
