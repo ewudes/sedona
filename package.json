@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "npx gulp"
+    "start": "npx gulp",
+    "build": "npx gulp build"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
