@@ -1,0 +1,55 @@
+doctype html
+html(lang='ru')
+  include includes/head.pug
+  body
+    .wrapper
+      include includes/header.pug
+      main.maincontent
+        .banner.banner--short
+          img(src='assets/img/intro.svg' width='460' height='80' alt='Welcome to the gorgeous sedona').banner-pic
+        h2.title Фото и видео
+        p
+          | Не можете решиться на путешествие?
+          br
+          | Фотографии помогут вам забыть о политике и экономике
+        section.photos
+          h2.visually-hidden Фотогалерея
+          ul.photos__list
+            li.photos__item
+              img(src='#')
+              .photos__description
+                .title Неродные просторы
+                .author Автор фото: Борис
+                .likes 1350
+            li.photos__item
+              img(src='#')
+              .photos__description
+                .title Местная растительность
+                .author Автор фото: Сергей
+                .likes 143
+            li.photos__item
+              img(src='#')
+              .photos__description
+                .title Дорога на север
+                .author Автор фото: Петр
+                .likes 96
+            li.photos__item
+              img(src='#')
+              .photos__description
+                .title Мост дьявола
+                .author Автор фото: Антон
+                .likes 254
+        section.presentation
+          h2 Всё ещё сомневаетесь?
+          p
+            | Смотрите видеопрезентацию и скорее за билетами,
+            br
+            | пока они не подорожали в очередной раз!
+          .player
+            img(src="#").player__pic
+            .player__controls
+              button.player__btn.player__btn--replay
+              .player__slider
+              button.player__btn.player__btn--subtitles
+              button.player__btn.player__btn--fullscreen
+      include includes/footer.pug
