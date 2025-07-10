@@ -71,7 +71,7 @@ export function scripts() {
 }
 
 export function images() {
-  return src(paths.images.src)
+  return src(paths.images.src, { encoding: false })
     .pipe(dest(paths.images.dest));
 }
 
